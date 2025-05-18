@@ -22,4 +22,9 @@ pipenv install scikit-learn==1.0.2 flask --python=3.9
 
  
 
- docker build -t ride-duration-prediction-service:v1
+ docker build -t ride-duration-prediction-service:v1 .
+
+ docker run -it --rm -p 9696:9696 ride-duration-prediction-service:v1
+
+
+ check zoomcap deployment form teh author to dpeloy teh docjer in ebs,kubernetes,eks,ecs and other https://github.com/ccfahe/mlbookcamp-code/tree/master/course-zoomcamp/05-deployment
