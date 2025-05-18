@@ -3,8 +3,10 @@ conda activate exp-tracking-env
 cd 03-training/experiment_tracking/
 
 # Start MLflow UI in background
-mlflow ui --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlruns &
-MLFLOW_PID=$!
+#mlflow ui --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlruns &
+#MLFLOW_PID=$!
+
+
 
 # Run Jupyter notebook non-interactively
 #jupyter nbconvert --to notebook --execute pipeline.ipynb --output pipeline1.ipynb

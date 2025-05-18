@@ -12,8 +12,10 @@ hyperopt = "*"
 xgboost = "*"
 scikit-learn = "==1.0.2"
 flask = "*"
+gunicorn = "*"
 
 [dev-packages]
+requests = "*"
 
 [requires]
 python_version = "3.9"

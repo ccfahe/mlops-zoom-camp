@@ -1,1 +1,25 @@
 pipenv install scikit-learn==1.0.2 flask --python=3.9
+ 
+ For the warning we nee dto do below:
+  WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ for prod :pipenv install gunicorn
+
+
+ gunicorn --bind=0.0.0.0:9696 predict:app
+ test wih python test.py
+
+
+
+ requests is used for dev only not prod so we  will install in dev with below command
+
+ pipenv install --dev requests
+
+
+
+ Now app is ready we need to package as docker conatinetr:
+
+ 
+
+ docker build -t ride-duration-prediction-service:v1
