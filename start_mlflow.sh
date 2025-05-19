@@ -3,8 +3,8 @@ conda activate exp-tracking-env
 cd 03-training/experiment_tracking/
 
 # Start MLflow UI in background
-#mlflow ui --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlruns &
-#MLFLOW_PID=$!
+mlflow ui --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlruns &
+MLFLOW_PID=$!
 
 
 
