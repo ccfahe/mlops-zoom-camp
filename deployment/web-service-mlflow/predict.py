@@ -5,10 +5,15 @@ import mlflow
 from flask import Flask, request, jsonify
 
 
-RUN_ID = os.getenv('RUN_ID')
+RUN_ID = "13ef082caeca4781bd2447ebc00d626f"
+MLFLOW_TRACKING_URI = "http://127.0.1:5000"
+mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
+client = mlflow.tracking.MlflowClient(tracking_uri=MLFLOW_TRACKING_URI)
+path= client.download_artifacts(run_id=RUN_ID, path='dict_vectorizer.bin')
+with open(path, 'rb') as f:
+    model = pickle.load(f)
 
-logged_model = f's3://mlflow-models-alexey/1/{RUN_ID}/artifacts/model'
-# logged_model = f'runs:/{RUN_ID}/model'
+logged_model = f'runs:/{RUN_ID}/model'
 model = mlflow.pyfunc.load_model(logged_model)
 
 
