@@ -28,3 +28,9 @@ pipenv install scikit-learn==1.0.2 flask --python=3.9
 
 
  check zoomcap deployment form teh author to dpeloy teh docjer in ebs,kubernetes,eks,ecs and other https://github.com/ccfahe/mlbookcamp-code/tree/master/course-zoomcamp/05-deployment
+
+
+
+ pipenv shell
+ python predict.py
+ python test.py
