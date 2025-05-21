@@ -6,6 +6,7 @@ cd 03-training/experiment_tracking/
 mlflow ui --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlruns &
 MLFLOW_PID=$!
 
+#jupyter notebook
 
 
 # Run Jupyter notebook non-interactively
